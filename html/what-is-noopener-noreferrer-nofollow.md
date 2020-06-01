@@ -6,7 +6,7 @@ They are used in links set to open in a new tab:
 
 ## noopener
 
-When you are using target=" \_blank" value, the page you are linking to gets partial access to the linking page through the `window.opener` object. The linking page could then use `window.opener.location` to, for instance, display a malicious login form.
+When using `target="_blank"`, the page you are linking to gets partial access to the linking page through the `window.opener` object. The linking page could then use `window.opener.location` to, for instance, display a malicious login form.
 
 When you use `rel="noopener"`,`window.opener` will return `null`.
 
