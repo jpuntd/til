@@ -11,3 +11,5 @@ Today I learned oh-my-zsh has two functions, clipcopy and clippaste, that can do
     clippaste              - writes clipboard's contents to stdout  
     clippaste | <command>  - pastes contents and pipes it to another process
     clippaste > <file>     - paste contents to a file
+
+[source](https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/clipboard.zsh)
