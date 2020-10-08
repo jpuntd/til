@@ -5,6 +5,33 @@ I was looking at how TypeScript transpiles private properties of a class.
 <details><summary>Short answer.</summary>Using a WeakMap to store the private data for each instance of the class.
 It also follows the convention of prefixing the private members with underscore. So `_min` and `_max` are private in the following code.</details>
 
+## Typescript example
+
+```typescript
+class NumberRange implements IterableIterator<number | undefined> {
+  #min = 0;
+  #max = 9;
+
+  constructor(min: number, max: number) {
+    this.#min = min;
+    this.#max = max;
+  }
+
+  next() {
+    return this.#min <= this.#max
+      ? { done: false, value: this.#min++ }
+      : { done: true, value: undefined };
+  }
+
+  [Symbol.iterator]() {
+    return this;
+  }
+}
+
+let s = new NumberRange(4, 6);
+console.log([...s]);
+```
+
 ## Transpiled code:
 
 ```javascript
