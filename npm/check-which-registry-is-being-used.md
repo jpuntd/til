@@ -4,4 +4,4 @@ Use `npm whoami` to check which username is currently being used in the directo
 
 Add the `--verbose` flag to see which repository is accessed:
 
-    npm install --verbose phy-utils
+    npm install --verbose my-utils

@@ -5,15 +5,15 @@
 ## Example
 
 ```javascript
-container.find(PhyCombobox).at(0).invoke("phyonselect")({ value: "nl" });
+container.find(MyCombobox).at(0).invoke('myonselect')({ value: 'nl' });
 ```
 
 We want to get more information on the first combobox.
 
 ```javascript
 container
-  .find(PhyCombobox)
+  .find(MyCombobox)
   .at(0)
   .tap((node) => console.log(node.debug()))
-  .invoke("phyonselect")({ value: "nl" });
+  .invoke('myonselect')({ value: 'nl' });
 ```
