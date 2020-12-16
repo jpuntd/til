@@ -9,19 +9,19 @@ Use the following selector to get all the elements that can be tabbed to:
 ```javascript
 const tabKeycode = 9;
 
-function loopFocus(event) {
+function trapFocus(event) {
   if (event.keyCode === tabKeycode) {
-    if (!event.shiftKey && document.activeElement === containerLastFocusable) {
+    if (!event.shiftKey && document.activeElement === modalLastFocusable) {
       event.preventDefault();
-      containerFirstFocusable.focus();
-    } else if (event.shiftKey && document.activeElement === containerFirstFocusable) {
+      modalFirstFocusable.focus();
+    } else if (event.shiftKey && document.activeElement === modalFirstFocusable) {
       event.preventDefault();
-      containerLastFocusable.focus();
+      modalLastFocusable.focus();
     }
   }
 }
 
-modal.addEventListener('keydown', loopFocus);
+modal.addEventListener('keydown', trapFocus);
 ```
 
 [source](https://github.com/tidave85/a11y-focus-trap/blob/master/index.js)
