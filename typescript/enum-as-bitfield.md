@@ -8,7 +8,7 @@ enum TextDecorations {
   Italic = 4
 }
 
-let myTextStyle:TextDecorations = TextDecorations.Bold & TextDecorations.Italic;
+let myTextStyle:TextDecorations = TextDecorations.Bold + TextDecorations.Italic;
 ```
 
 Now we can check if myText is Bold.
