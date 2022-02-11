@@ -14,7 +14,7 @@ let myTextStyle:TextDecorations = TextDecorations.Bold + TextDecorations.Italic;
 Now we can check if myText is Bold.
 
 ```typescript
-if (myTextStyle & TextDecorations.Bold === TextDecorations.Bold) {
+if ((myTextStyle & TextDecorations.Bold) === TextDecorations.Bold) {
   // ...
 }
 ```
