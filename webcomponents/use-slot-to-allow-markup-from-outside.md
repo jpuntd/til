@@ -8,7 +8,7 @@ Today I learned that the syntax for slots in web component templates is exactly 
 
 ```html
 <div>
-  <h2>I'm a title</h2>
+  <h2>Title here</h2>
   <slot>
     <!-- will be replaced by content from slot -->
   </slot>
